@@ -24,9 +24,9 @@
    "venue": "佐賀",
    "race_no": 9,
    "post": "19:05",
-   "final": false,
+   "final": true,
    "at": "18:49",
-   "at_final": null,
+   "at_final": "19:00:11",
    "bets": [
     {
      "type": "ワイド",
@@ -40,5 +40,5 @@
    ]
   }
  ],
- "created": "2026-10-24 18:49"
+ "created": "2026-10-24 19:00"
 }
