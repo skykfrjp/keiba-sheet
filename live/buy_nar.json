@@ -43,9 +43,9 @@
    "venue": "高知",
    "race_no": 10,
    "post": "19:45",
-   "final": false,
+   "final": true,
    "at": "19:29",
-   "at_final": null,
+   "at_final": "19:40:14",
    "bets": [
     {
      "type": "ワイド",
@@ -57,7 +57,26 @@
      "yen": 500
     }
    ]
+  },
+  {
+   "venue": "佐賀",
+   "race_no": 11,
+   "post": "20:10",
+   "final": false,
+   "at": "19:54",
+   "at_final": null,
+   "bets": [
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      1,
+      6
+     ],
+     "yen": 500
+    }
+   ]
   }
  ],
- "created": "2026-10-24 19:29"
+ "created": "2026-10-24 19:54"
 }
