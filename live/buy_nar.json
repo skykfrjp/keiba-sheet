@@ -98,9 +98,9 @@
    "venue": "金沢",
    "race_no": 8,
    "post": "18:25",
-   "final": false,
+   "final": true,
    "at": "18:09",
-   "at_final": null,
+   "at_final": "18:20:28",
    "bets": [
     {
      "type": "ワイド",
@@ -152,5 +152,5 @@
    ]
   }
  ],
- "created": "2026-10-25 18:19"
+ "created": "2026-10-25 18:20"
 }
