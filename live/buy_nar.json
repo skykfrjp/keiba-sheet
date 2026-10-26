@@ -1,165 +1,25 @@
 {
- "date": "2026-10-25",
+ "date": "2026-10-26",
  "races": [
   {
    "venue": "盛岡",
    "race_no": 1,
-   "post": "11:40",
-   "final": true,
-   "at": "11:24",
-   "at_final": "11:35:06",
+   "post": "11:45",
+   "final": false,
+   "at": "11:29",
+   "at_final": null,
    "bets": [
     {
      "type": "ワイド",
      "tier": "◎",
      "kumi": [
-      7,
-      11
-     ],
-     "yen": 500
-    }
-   ]
-  },
-  {
-   "venue": "盛岡",
-   "race_no": 9,
-   "post": "16:25",
-   "final": true,
-   "at": "16:09",
-   "at_final": "16:20:19",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
+      3,
       5
-     ],
-     "yen": 500
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      9
-     ],
-     "yen": 500
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      11
-     ],
-     "yen": 500
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      7
-     ],
-     "yen": 500
-    }
-   ]
-  },
-  {
-   "venue": "盛岡",
-   "race_no": 11,
-   "post": "17:40",
-   "final": true,
-   "at": "17:24",
-   "at_final": "17:35:24",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      4,
-      9
-     ],
-     "yen": 500
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      4,
-      6
-     ],
-     "yen": 500
-    }
-   ]
-  },
-  {
-   "venue": "金沢",
-   "race_no": 8,
-   "post": "18:25",
-   "final": true,
-   "at": "18:09",
-   "at_final": "18:20:28",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      3
-     ],
-     "yen": 500
-    }
-   ]
-  },
-  {
-   "venue": "佐賀",
-   "race_no": 6,
-   "post": "18:30",
-   "final": true,
-   "at": "18:14",
-   "at_final": "18:25:08",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      5
-     ],
-     "yen": 500
-    }
-   ]
-  },
-  {
-   "venue": "高知",
-   "race_no": 7,
-   "post": "18:35",
-   "final": true,
-   "at": "18:19",
-   "at_final": "18:30:10",
-   "bets": []
-  },
-  {
-   "venue": "佐賀",
-   "race_no": 8,
-   "post": "19:35",
-   "final": true,
-   "at": "19:19",
-   "at_final": "19:30:14",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      2
      ],
      "yen": 500
     }
    ]
   }
  ],
- "created": "2026-10-25 19:30"
+ "created": "2026-10-26 11:29"
 }
