@@ -42,21 +42,11 @@
    "venue": "盛岡",
    "race_no": 7,
    "post": "15:10",
-   "final": false,
+   "final": true,
    "at": "14:54",
-   "at_final": null,
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      9
-     ],
-     "yen": 500
-    }
-   ]
+   "at_final": "15:05:23",
+   "bets": []
   }
  ],
- "created": "2026-10-26 14:54"
+ "created": "2026-10-26 15:05"
 }
