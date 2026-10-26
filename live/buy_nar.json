@@ -33,21 +33,30 @@
    "venue": "佐賀",
    "race_no": 2,
    "post": "14:50",
-   "final": false,
+   "final": true,
    "at": "14:34",
+   "at_final": "14:45:21",
+   "bets": []
+  },
+  {
+   "venue": "盛岡",
+   "race_no": 7,
+   "post": "15:10",
+   "final": false,
+   "at": "14:54",
    "at_final": null,
    "bets": [
     {
      "type": "ワイド",
      "tier": "◎",
      "kumi": [
-      1,
-      4
+      5,
+      9
      ],
      "yen": 500
     }
    ]
   }
  ],
- "created": "2026-10-26 14:35"
+ "created": "2026-10-26 14:54"
 }
