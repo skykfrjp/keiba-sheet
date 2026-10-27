@@ -117,9 +117,9 @@
    "venue": "門別",
    "race_no": 6,
    "post": "17:05",
-   "final": false,
+   "final": true,
    "at": "16:49",
-   "at_final": null,
+   "at_final": "17:00:15",
    "bets": [
     {
      "type": "ワイド",
@@ -133,5 +133,5 @@
    ]
   }
  ],
- "created": "2026-10-27 16:49"
+ "created": "2026-10-27 17:00"
 }
