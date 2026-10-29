@@ -165,9 +165,9 @@
    "venue": "名古屋",
    "race_no": 8,
    "post": "16:20",
-   "final": false,
+   "final": true,
    "at": "16:04",
-   "at_final": null,
+   "at_final": "16:15:20",
    "bets": [
     {
      "type": "ワイド",
@@ -197,7 +197,53 @@
      "yen": 600
     }
    ]
+  },
+  {
+   "venue": "門別",
+   "race_no": 5,
+   "post": "16:35",
+   "final": false,
+   "at": "16:19",
+   "at_final": null,
+   "bets": [
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      5,
+      10
+     ],
+     "yen": 500
+    },
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      1,
+      10
+     ],
+     "yen": 500
+    },
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      10,
+      12
+     ],
+     "yen": 500
+    },
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      7,
+      10
+     ],
+     "yen": 500
+    }
+   ]
   }
  ],
- "created": "2026-10-29 16:04"
+ "created": "2026-10-29 16:19"
 }
