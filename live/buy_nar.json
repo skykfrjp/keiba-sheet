@@ -3,151 +3,11 @@
  "races": [
   {
    "venue": "大井",
-   "race_no": 1,
-   "post": "14:30",
-   "final": true,
-   "at": "14:14",
-   "at_final": "14:25:11",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      10,
-      12
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      12
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "大井",
-   "race_no": 2,
-   "post": "15:02",
-   "final": true,
-   "at": "14:46",
-   "at_final": "14:57:13",
-   "bets": []
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 10,
-   "post": "17:25",
-   "final": true,
-   "at": "17:09",
-   "at_final": "17:20:22",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      11,
-      12
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      12
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "大井",
-   "race_no": 8,
-   "post": "18:20",
-   "final": true,
-   "at": "18:04",
-   "at_final": "18:15:26",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      9,
-      14
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      9,
-      11
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "大井",
-   "race_no": 9,
-   "post": "18:55",
-   "final": true,
-   "at": "18:39",
-   "at_final": "18:50:09",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      12
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      10,
-      12
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "園田",
-   "race_no": 10,
-   "post": "19:20",
-   "final": true,
-   "at": "19:04",
-   "at_final": "19:15:11",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      9
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "大井",
    "race_no": 11,
    "post": "20:10",
-   "final": false,
-   "at": "19:54",
-   "at_final": null,
+   "final": true,
+   "at": "20:05",
+   "at_final": "20:05:16",
    "bets": [
     {
      "type": "ワイド",
@@ -161,5 +21,5 @@
    ]
   }
  ],
- "created": "2026-10-30 19:54"
+ "created": "2026-10-30 20:05"
 }
