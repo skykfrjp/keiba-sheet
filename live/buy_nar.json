@@ -33,30 +33,11 @@
    "venue": "大井",
    "race_no": 2,
    "post": "15:02",
-   "final": false,
+   "final": true,
    "at": "14:46",
-   "at_final": null,
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      6
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      5
-     ],
-     "yen": 1000
-    }
-   ]
+   "at_final": "14:57:13",
+   "bets": []
   }
  ],
- "created": "2026-10-30 14:46"
+ "created": "2026-10-30 14:57"
 }
