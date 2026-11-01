@@ -71,9 +71,9 @@
    "venue": "高知",
    "race_no": 6,
    "post": "17:40",
-   "final": false,
+   "final": true,
    "at": "17:24",
-   "at_final": null,
+   "at_final": "17:35:13",
    "bets": [
     {
      "type": "ワイド",
@@ -105,5 +105,5 @@
    ]
   }
  ],
- "created": "2026-11-01 17:24"
+ "created": "2026-11-01 17:35"
 }
