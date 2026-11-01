@@ -1,25 +1,25 @@
 {
- "date": "2026-10-30",
+ "date": "2026-11-01",
  "races": [
   {
-   "venue": "大井",
-   "race_no": 11,
-   "post": "20:10",
-   "final": true,
-   "at": "20:05",
-   "at_final": "20:05:16",
+   "venue": "佐賀",
+   "race_no": 3,
+   "post": "15:50",
+   "final": false,
+   "at": "15:34",
+   "at_final": null,
    "bets": [
     {
      "type": "ワイド",
      "tier": "◎",
      "kumi": [
-      8,
-      11
+      11,
+      12
      ],
      "yen": 1000
     }
    ]
   }
  ],
- "created": "2026-10-30 20:05"
+ "created": "2026-11-01 15:34"
 }
