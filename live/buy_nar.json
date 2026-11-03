@@ -119,9 +119,9 @@
    "venue": "船橋",
    "race_no": 7,
    "post": "18:00",
-   "final": false,
+   "final": true,
    "at": "17:44",
-   "at_final": null,
+   "at_final": "17:55:10",
    "bets": [
     {
      "type": "ワイド",
@@ -144,5 +144,5 @@
    ]
   }
  ],
- "created": "2026-11-03 17:44"
+ "created": "2026-11-03 17:55"
 }
