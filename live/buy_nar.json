@@ -24,9 +24,9 @@
    "venue": "金沢",
    "race_no": 3,
    "post": "12:00",
-   "final": false,
+   "final": true,
    "at": "11:44",
-   "at_final": null,
+   "at_final": "11:55:07",
    "bets": [
     {
      "type": "ワイド",
@@ -40,5 +40,5 @@
    ]
   }
  ],
- "created": "2026-11-03 11:44"
+ "created": "2026-11-03 11:55"
 }
