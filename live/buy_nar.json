@@ -99,9 +99,9 @@
    "venue": "園田",
    "race_no": 11,
    "post": "16:00",
-   "final": false,
+   "final": true,
    "at": "15:44",
-   "at_final": null,
+   "at_final": "15:55:13",
    "bets": [
     {
      "type": "ワイド",
@@ -115,5 +115,5 @@
    ]
   }
  ],
- "created": "2026-11-05 15:44"
+ "created": "2026-11-05 15:55"
 }
