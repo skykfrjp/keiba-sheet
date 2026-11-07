@@ -5,21 +5,11 @@
    "venue": "佐賀",
    "race_no": 1,
    "post": "15:25",
-   "final": false,
+   "final": true,
    "at": "15:10",
-   "at_final": null,
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      6
-     ],
-     "yen": 1000
-    }
-   ]
+   "at_final": "15:20:09",
+   "bets": []
   }
  ],
- "created": "2026-11-07 15:10"
+ "created": "2026-11-07 15:20"
 }
