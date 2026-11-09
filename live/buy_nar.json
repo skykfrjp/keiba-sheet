@@ -99,9 +99,9 @@
    "venue": "盛岡",
    "race_no": 7,
    "post": "15:15",
-   "final": false,
+   "final": true,
    "at": "14:59",
-   "at_final": null,
+   "at_final": "15:10:24",
    "bets": [
     {
      "type": "ワイド",
@@ -124,5 +124,5 @@
    ]
   }
  ],
- "created": "2026-11-09 15:05"
+ "created": "2026-11-09 15:10"
 }
