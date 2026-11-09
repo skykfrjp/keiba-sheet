@@ -61,9 +61,9 @@
    "venue": "名古屋",
    "race_no": 2,
    "post": "13:10",
-   "final": false,
+   "final": true,
    "at": "12:54",
-   "at_final": null,
+   "at_final": "13:05:13",
    "bets": [
     {
      "type": "ワイド",
@@ -77,5 +77,5 @@
    ]
   }
  ],
- "created": "2026-11-09 12:54"
+ "created": "2026-11-09 13:05"
 }
