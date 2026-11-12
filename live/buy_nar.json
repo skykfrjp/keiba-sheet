@@ -24,9 +24,9 @@
    "venue": "園田",
    "race_no": 8,
    "post": "14:20",
-   "final": false,
+   "final": true,
    "at": "14:04",
-   "at_final": null,
+   "at_final": "14:15:04",
    "bets": [
     {
      "type": "ワイド",
@@ -36,9 +36,18 @@
       12
      ],
      "yen": 1000
+    },
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      1,
+      5
+     ],
+     "yen": 1000
     }
    ]
   }
  ],
- "created": "2026-11-12 14:04"
+ "created": "2026-11-12 14:15"
 }
