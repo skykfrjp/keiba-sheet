@@ -174,9 +174,9 @@
    "venue": "門別",
    "race_no": 5,
    "post": "16:30",
-   "final": false,
+   "final": true,
    "at": "16:14",
-   "at_final": null,
+   "at_final": "16:25:18",
    "bets": [
     {
      "type": "ワイド",
@@ -186,9 +186,37 @@
       12
      ],
      "yen": 1000
+    },
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      1,
+      6
+     ],
+     "yen": 1000
+    }
+   ]
+  },
+  {
+   "venue": "川崎",
+   "race_no": 5,
+   "post": "16:45",
+   "final": false,
+   "at": "16:29",
+   "at_final": null,
+   "bets": [
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      2,
+      8
+     ],
+     "yen": 1000
     }
    ]
   }
  ],
- "created": "2026-11-12 16:20"
+ "created": "2026-11-12 16:29"
 }
