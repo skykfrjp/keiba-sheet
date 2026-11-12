@@ -1,147 +1,25 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "races": [
   {
-   "venue": "門別",
-   "race_no": 7,
-   "post": "17:30",
-   "final": true,
-   "at": "17:22",
-   "at_final": "17:25:10",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      5
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
    "venue": "名古屋",
-   "race_no": 11,
-   "post": "18:00",
-   "final": true,
-   "at": "17:44",
-   "at_final": "17:55:13",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      7,
-      11
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "門別",
-   "race_no": 8,
-   "post": "18:05",
-   "final": true,
-   "at": "17:49",
-   "at_final": "18:00:14",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      8
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      6
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 12,
-   "post": "18:35",
-   "final": true,
-   "at": "18:19",
-   "at_final": "18:30:17",
+   "race_no": 3,
+   "post": "13:30",
+   "final": false,
+   "at": "13:14",
+   "at_final": null,
    "bets": [
     {
      "type": "ワイド",
      "tier": "◎",
      "kumi": [
       4,
-      6
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      3,
-      6
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "川崎",
-   "race_no": 9,
-   "post": "18:55",
-   "final": true,
-   "at": "18:39",
-   "at_final": "18:50:19",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      3,
-      10
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "川崎",
-   "race_no": 10,
-   "post": "19:30",
-   "final": true,
-   "at": "19:14",
-   "at_final": "19:25:23",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      4,
-      10
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      10,
-      13
+      9
      ],
      "yen": 1000
     }
    ]
   }
  ],
- "created": "2026-11-11 19:25"
+ "created": "2026-11-12 13:14"
 }
