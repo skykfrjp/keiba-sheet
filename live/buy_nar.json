@@ -146,21 +146,11 @@
    "venue": "川崎",
    "race_no": 4,
    "post": "16:15",
-   "final": false,
+   "final": true,
    "at": "15:59",
-   "at_final": null,
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      8,
-      12
-     ],
-     "yen": 1000
-    }
-   ]
+   "at_final": "16:10:15",
+   "bets": []
   }
  ],
- "created": "2026-11-12 15:59"
+ "created": "2026-11-12 16:10"
 }
