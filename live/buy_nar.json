@@ -221,30 +221,11 @@
    "venue": "門別",
    "race_no": 10,
    "post": "19:10",
-   "final": false,
+   "final": true,
    "at": "18:54",
-   "at_final": null,
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      10
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      10
-     ],
-     "yen": 1000
-    }
-   ]
+   "at_final": "19:05:09",
+   "bets": []
   }
  ],
- "created": "2026-11-12 18:54"
+ "created": "2026-11-12 19:05"
 }
