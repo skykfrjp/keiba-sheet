@@ -324,9 +324,9 @@
    "venue": "川崎",
    "race_no": 12,
    "post": "20:50",
-   "final": false,
+   "final": true,
    "at": "20:35",
-   "at_final": null,
+   "at_final": "20:45:23",
    "bets": [
     {
      "type": "ワイド",
@@ -340,5 +340,5 @@
    ]
   }
  ],
- "created": "2026-11-12 20:35"
+ "created": "2026-11-12 20:45"
 }
