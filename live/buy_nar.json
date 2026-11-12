@@ -249,9 +249,9 @@
    "venue": "門別",
    "race_no": 11,
    "post": "19:45",
-   "final": false,
+   "final": true,
    "at": "19:29",
-   "at_final": null,
+   "at_final": "19:40:13",
    "bets": [
     {
      "type": "ワイド",
@@ -265,5 +265,5 @@
    ]
   }
  ],
- "created": "2026-11-12 19:29"
+ "created": "2026-11-12 19:40"
 }
