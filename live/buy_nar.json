@@ -33,9 +33,9 @@
    "venue": "名古屋",
    "race_no": 9,
    "post": "17:05",
-   "final": false,
+   "final": true,
    "at": "16:49",
-   "at_final": null,
+   "at_final": "17:00:11",
    "bets": [
     {
      "type": "ワイド",
@@ -45,18 +45,9 @@
       10
      ],
      "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      3
-     ],
-     "yen": 1000
     }
    ]
   }
  ],
- "created": "2026-11-13 16:49"
+ "created": "2026-11-13 17:00"
 }
