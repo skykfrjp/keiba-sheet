@@ -263,4 +263,4 @@ let s=fromHash();if(s<0){s=0;try{s=+localStorage.getItem('r')||0}catch(e){}}pick
 window.addEventListener('hashchange',()=>{const i=fromHash();if(i>=0){pick(i);window.scrollTo({top:nav.offsetTop-4})}});
 </script>
 
-</body></html>
+<a id="n63nav" href="today.html" style="position:fixed;right:14px;bottom:18px;z-index:9999;padding:9px 14px;border-radius:20px;background:#1f6feb;color:#fff;font:600 14px -apple-system,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">一覧</a><script id="n63hash">(function(){function go(){var m=/^#R(\d+)$/.exec(location.hash);if(!m)return;var b=document.getElementById("race-"+m[1]);if(b&&b.getAttribute("aria-pressed")!=="true")b.click();}go();addEventListener("hashchange",go);addEventListener("pageshow",go);})();</script></body></html>
