@@ -117,19 +117,10 @@
    "venue": "金沢",
    "race_no": 8,
    "post": "18:15",
-   "final": false,
+   "final": true,
    "at": "17:59",
-   "at_final": null,
+   "at_final": "18:10:04",
    "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      3,
-      6
-     ],
-     "yen": 1000
-    },
     {
      "type": "ワイド",
      "tier": "◎",
@@ -161,5 +152,5 @@
    ]
   }
  ],
- "created": "2026-11-17 18:04"
+ "created": "2026-11-17 18:10"
 }
