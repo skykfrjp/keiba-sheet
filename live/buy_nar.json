@@ -33,9 +33,9 @@
    "venue": "大井",
    "race_no": 7,
    "post": "17:45",
-   "final": false,
+   "final": true,
    "at": "17:30",
-   "at_final": null,
+   "at_final": "17:40:15",
    "bets": [
     {
      "type": "ワイド",
@@ -49,5 +49,5 @@
    ]
   }
  ],
- "created": "2026-11-18 17:30"
+ "created": "2026-11-18 17:40"
 }
