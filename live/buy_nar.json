@@ -62,9 +62,9 @@
    "venue": "笠松",
    "race_no": 11,
    "post": "15:45",
-   "final": false,
+   "final": true,
    "at": "15:29",
-   "at_final": null,
+   "at_final": "15:40:06",
    "bets": [
     {
      "type": "ワイド",
@@ -78,5 +78,5 @@
    ]
   }
  ],
- "created": "2026-11-19 15:29"
+ "created": "2026-11-19 15:40"
 }
