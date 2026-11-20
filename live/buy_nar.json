@@ -2,136 +2,24 @@
  "date": "2026-11-20",
  "races": [
   {
-   "venue": "園田",
-   "race_no": 5,
-   "post": "12:40",
-   "final": true,
-   "at": "12:24",
-   "at_final": "12:35:07",
-   "bets": []
-  },
-  {
-   "venue": "笠松",
-   "race_no": 6,
-   "post": "12:55",
-   "final": true,
-   "at": "12:50",
-   "at_final": "12:50:08",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      7,
-      10
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "園田",
-   "race_no": 10,
-   "post": "15:20",
-   "final": true,
-   "at": "15:04",
-   "at_final": "15:15:16",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      11
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "笠松",
+   "venue": "大井",
    "race_no": 11,
-   "post": "15:45",
-   "final": true,
-   "at": "15:29",
-   "at_final": "15:40:19",
+   "post": "20:10",
+   "final": false,
+   "at": "19:55",
+   "at_final": null,
    "bets": [
     {
      "type": "ワイド",
      "tier": "◎",
      "kumi": [
       1,
-      11
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      4
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "大井",
-   "race_no": 7,
-   "post": "17:45",
-   "final": true,
-   "at": "17:30",
-   "at_final": "17:40:25",
-   "bets": []
-  },
-  {
-   "venue": "大井",
-   "race_no": 8,
-   "post": "18:20",
-   "final": true,
-   "at": "18:05",
-   "at_final": "18:15:28",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      3,
-      4
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "大井",
-   "race_no": 10,
-   "post": "19:30",
-   "final": true,
-   "at": "19:15",
-   "at_final": "19:25:13",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      4
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      1,
-      11
+      12
      ],
      "yen": 1000
     }
    ]
   }
  ],
- "created": "2026-11-20 19:25"
+ "created": "2026-11-20 19:55"
 }
