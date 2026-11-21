@@ -203,9 +203,17 @@ async function refreshLive(){const msg=document.getElementById('live-msg');msg.t
  race(D.races[CUR])}
 document.getElementById('live-reload').addEventListener('click',refreshLive);
 const nav=document.getElementById('nav');
-function pick(i){CUR=i;[...nav.children].forEach((b,j)=>b.setAttribute('aria-pressed',j===i));race(D.races[i]);try{localStorage.setItem('r',i)}catch(e){}}
+/* レースの選び方（11/21）：URL の #R5 を正とする。ボタンで替えたら #R も書き換える（戻る・再読込・アプリ切替でずれないように）。
+   前回のレースは場のページごとに R 番号で覚える（他の場のページの番号に引っぱられないように） */
+const LSK='r:'+location.pathname;
+function idxR(R){return D.races.findIndex(r=>r.R===R)}
+function fromHash(){const m=/^#R(\d+)$/.exec(location.hash);return m?idxR(+m[1]):-1}
+function pick(i){CUR=i;[...nav.children].forEach((b,j)=>b.setAttribute('aria-pressed',j===i));race(D.races[i]);
+ try{history.replaceState(null,'','#R'+D.races[i].R)}catch(e){}try{localStorage.setItem(LSK,D.races[i].R)}catch(e){}}
 D.races.forEach((r,i)=>{const b=$('button','',r.R+'R');b.id='race-'+r.R;b.onclick=()=>{pick(i);window.scrollTo({top:nav.offsetTop-4})};nav.append(b)});
-let s=0;try{s=+localStorage.getItem('r')||0}catch(e){}pick(Math.min(s,D.races.length-1));refreshLive();
+let s=fromHash();if(s<0){try{s=idxR(+localStorage.getItem(LSK))}catch(e){}}pick(s>=0?s:0);refreshLive();
+function follow(){const i=fromHash();if(i>=0&&i!==CUR)pick(i)}
+window.addEventListener('hashchange',follow);window.addEventListener('pageshow',follow);
 </script>
 
 </body></html>
