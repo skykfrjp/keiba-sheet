@@ -24,20 +24,10 @@
    "venue": "佐賀",
    "race_no": 8,
    "post": "19:10",
-   "final": false,
+   "final": true,
    "at": "18:54",
-   "at_final": null,
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      9,
-      10
-     ],
-     "yen": 1000
-    }
-   ]
+   "at_final": "19:05:18",
+   "bets": []
   },
   {
    "venue": "高知",
@@ -68,5 +58,5 @@
    ]
   }
  ],
- "created": "2026-11-21 19:04"
+ "created": "2026-11-21 19:05"
 }
