@@ -61,9 +61,9 @@
    "venue": "水沢",
    "race_no": 10,
    "post": "17:15",
-   "final": false,
+   "final": true,
    "at": "16:59",
-   "at_final": null,
+   "at_final": "17:10:22",
    "bets": [
     {
      "type": "ワイド",
@@ -75,7 +75,26 @@
      "yen": 1000
     }
    ]
+  },
+  {
+   "venue": "佐賀",
+   "race_no": 5,
+   "post": "17:35",
+   "final": false,
+   "at": "17:19",
+   "at_final": null,
+   "bets": [
+    {
+     "type": "ワイド",
+     "tier": "◎",
+     "kumi": [
+      1,
+      7
+     ],
+     "yen": 1000
+    }
+   ]
   }
  ],
- "created": "2026-11-22 16:59"
+ "created": "2026-11-22 17:19"
 }
