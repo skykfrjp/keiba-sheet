@@ -55,12 +55,13 @@ function draw(){const m=document.getElementById('main');m.innerHTML='';if(!S)ret
  if(bad.length)w.append($('div','box alert','<h3>要確認</h3>'+bad.map(x=>'<p>'+esc(x)+'</p>').join('')));
  for(const g of ['共通','ボート','競馬','株']){const b=$('div','box',`<h2>${g}</h2>`);
   S.jobs.filter(j=>j.group===g).forEach(j=>b.append($('div','row',`<span>${esc(j.label)}</span>${chip(j.st,j.st==='ok'?'動いている':j.st==='ng'?'要確認':'—')}${j.st==='ok'?'':`<span class="sub">${esc(j.note)}</span>`}`)));
+  if(g==='共通'&&S.w10){const x=S.w10;b.append($('div','row',`<span>死活監視 w10（iPhone）</span>${chip(x.st,x.st==='ok'?'動いている':'—')}<span class="sub">${esc(x.note)}${x.last?'：'+esc(x.last):''}</span>`))}
   if(g==='競馬'&&S.n05){const n=S.n05;b.append($('div','row',`<span>n05 の状態</span>${chip(n.phase==='記録中'?'ok':/停止/.test(n.phase)?'ng':'off',n.phase||'不明')}<span class="sub">n05 が書いた時刻 ${esc(n.updated||'―')}</span>`));
    n.workers.forEach(w=>b.append($('div','row',`<span>${esc(w.name)}</span>${chip(w.alive?'ok':'off',w.alive?'動いている':'止まっている')}<span class="sub">起動 ${w.starts}回${w.last_exit?'・最後に落ちた '+esc(w.last_exit):''}</span>`)))}
   if(g==='株')b.append($('div','row',`<span>kabuステーション</span>${chip(S.kabu.st,S.kabu.st==='ok'?'応答あり':S.kabu.st==='ng'?'応答なし':'時間外')}<span class="sub">${esc(S.kabu.note)}</span>`));
   if(g==='ボート'){const x=S.boat;b.append($('div','row',`<span>今日の購入</span>${chip(x.stop?'ng':'off',x.stop?'購入停止中':x.bought+'件 '+x.yen.toLocaleString()+'円')}<span class="sub">失敗 ${x.error}件・見送り ${x.skip}件</span>`))}
   const ts=S.tasks.filter(t=>t.group===g);
-  if(ts.length){b.append($('h3','','タスク（前回 → 次回）'));ts.forEach(t=>b.append($('div','row',`<span>${esc(t.name.replace(/^kabu\\/,''))}</span>${chip(t.st,t.st==='ok'?'成功':'失敗 '+t.result)}<span class="sub">前回 ${esc(t.last||'まだ')} → 次回 ${esc(t.next||'―')}</span>`)))}
+  if(ts.length){b.append($('h3','','タスク（前回 → 次回）'));ts.forEach(t=>b.append($('div','row',`<span>${esc(t.name.replace(/^kabu\\/,''))}</span>${chip(t.st,t.st==='ok'?(t.note||'成功'):'失敗 '+t.result)}<span class="sub">前回 ${esc(t.last||'まだ')} → 次回 ${esc(t.next||'―')}</span>`)))}
   const ls=S.logs.filter(l=>l.group===g);
   if(ls.length)b.append($('p','mut','ログの最終書き込み：'+ls.map(l=>esc(l.dir)+' '+esc(l.time)).join('、')));
   const cs=S.cmds.filter(c=>c.group===g);
