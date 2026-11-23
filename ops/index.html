@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>管理ページ</title>
+<style>
+:root{--bg:#f3f5f1;--card:#fff;--fg:#17211b;--mut:#5d6b62;--line:#d5dcd4;--ok:#0b6e4f;--okbg:#dcf1e6;--ng:#a23a2a;--ngbg:#f8e1dc;--off:#5d6b62;--offbg:#e8ece7;--bar:#1f6b45;
+--f:"Hiragino Sans","Yu Gothic UI","Noto Sans JP",system-ui,sans-serif;--num:"SF Mono",ui-monospace,Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#111714;--card:#1a221d;--fg:#e6ece7;--mut:#9aa89e;--line:#2f3a33;--ok:#6fd6a6;--okbg:#163a2b;--ng:#f09a8a;--ngbg:#45211b;--off:#9aa89e;--offbg:#242c27;--bar:#5cc48f;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--f)}
+.wrap{max-width:720px;margin:0 auto;padding:14px 16px 48px;display:flex;flex-direction:column;gap:14px}
+h1{font-size:20px;margin:0}h2{font-size:16px;margin:0}h3{font-size:13px;margin:0;color:var(--mut);font-weight:600}
+p{margin:0}.mut{color:var(--mut);font-size:13px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.box.alert{border:2px solid var(--ng);background:var(--ngbg)}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}.row .sub{grid-column:1/-1;font-size:12.5px;color:var(--mut)}
+.chip{font-size:12px;font-weight:700;padding:2px 9px;border-radius:10px;white-space:nowrap;justify-self:end}
+.ok{background:var(--okbg);color:var(--ok)}.ng{background:var(--ngbg);color:var(--ng)}.off{background:var(--offbg);color:var(--off)}
+button{font:600 14px var(--f);padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;text-align:left}
+button:active{opacity:.6}button.pri{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.cmds{display:flex;flex-direction:column;gap:6px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+</style></head><body>
+<div class="wrap">
+<header><h1>管理ページ</h1><p class="mut" id="sub">読み込み中…</p></header>
+<div id="warn"></div>
+<div class="box"><p><button class="pri" id="reload">最新にする</button></p><p class="mut" id="cmdmsg"></p></div>
+<main id="main" style="display:flex;flex-direction:column;gap:14px"></main>
+<div class="box"><h3>このページについて</h3>
+<p class="mut">PC の管理役（z10）が3分おきに調べて、変わったときに上げる（変わりがなくても30分おき）。サイトへの反映に1〜2分かかる。止まっているはずのないものが止まると、通知も来る。</p>
+<p class="mut">ボタンは命令を ntfy で PC に送るだけ。結果はいつもの通知で返ってくる。合言葉は、この iPhone のブラウザの中にだけ残る（ページには載っていない）。</p>
+<p><button id="forget">この端末の命令の設定を消す</button></p></div>
+</div>
+<script>
+const $=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const LBL={ok:'動いている',ng:'要確認',off:'—'};
+let S=null;
+function cred(){try{return JSON.parse(localStorage.getItem('opsCred')||'null')}catch(e){return null}}
+(function setup(){const m=/#setup=([^&]+)/.exec(location.hash);if(!m)return;const v=decodeURIComponent(m[1]);const i=v.lastIndexOf('.');
+ if(i>0){try{localStorage.setItem('opsCred',JSON.stringify({topic:v.slice(0,i),pass:v.slice(i+1),server:'https://ntfy.sh'}))}catch(e){}}
+ history.replaceState(null,'',location.pathname)})();
+async function send(c){const k=cred(),msg=document.getElementById('cmdmsg');
+ if(!k){msg.textContent='この端末ではまだ命令を送れない。通知の「管理ページの設定リンク」を1回開く。';return}
+ if(!confirm('「'+c+'」を PC に送りますか？'))return;
+ try{const r=await fetch(k.server+'/'+encodeURIComponent(k.topic),{method:'POST',body:k.pass+' '+c});
+  msg.textContent=r.ok?`「${c}」を送った（${new Date().toLocaleTimeString().slice(0,5)}）。結果は通知で届く。PC が受け取るまで最大15秒。`:'送れなかった（'+r.status+'）。';}
+ catch(e){msg.textContent='送れなかった（電波?）。もう一度押す。'}}
+function chip(st,t){return `<span class="chip ${st}">${esc(t||LBL[st])}</span>`}
+function draw(){const m=document.getElementById('main');m.innerHTML='';if(!S)return;
+ const age=(Date.now()-new Date(S.checked.replace(' ','T')+':00+09:00'))/60000;
+ document.getElementById('sub').textContent=`PC が調べた時刻 ${S.checked.slice(5)}（${Math.round(age)}分前）`;
+ const w=document.getElementById('warn');w.innerHTML='';
+ const bad=S.jobs.filter(j=>j.st==='ng').map(j=>j.label+'：'+j.note).concat(S.tasks.filter(t=>t.st==='ng').map(t=>'タスク '+t.name+' が失敗（'+t.result+'）')).concat(S.kabu.st==='ng'?['kabuステーション：'+S.kabu.note]:[]);
+ if(age>45)bad.unshift(`PC から ${Math.round(age)}分 届いていない（PC がスリープ・停止、または管理役 z10 が止まっている）`);
+ if(bad.length)w.append($('div','box alert','<h3>要確認</h3>'+bad.map(x=>'<p>'+esc(x)+'</p>').join('')));
+ for(const g of ['共通','ボート','競馬','株']){const b=$('div','box',`<h2>${g}</h2>`);
+  S.jobs.filter(j=>j.group===g).forEach(j=>b.append($('div','row',`<span>${esc(j.label)}</span>${chip(j.st,j.st==='ok'?'動いている':j.st==='ng'?'要確認':'—')}${j.st==='ok'?'':`<span class="sub">${esc(j.note)}</span>`}`)));
+  if(g==='株')b.append($('div','row',`<span>kabuステーション</span>${chip(S.kabu.st,S.kabu.st==='ok'?'応答あり':S.kabu.st==='ng'?'応答なし':'時間外')}<span class="sub">${esc(S.kabu.note)}</span>`));
+  if(g==='ボート'){const x=S.boat;b.append($('div','row',`<span>今日の購入</span>${chip(x.stop?'ng':'off',x.stop?'購入停止中':x.bought+'件 '+x.yen.toLocaleString()+'円')}<span class="sub">失敗 ${x.error}件・見送り ${x.skip}件</span>`))}
+  const ts=S.tasks.filter(t=>t.group===g);
+  if(ts.length){b.append($('h3','','タスク（前回 → 次回）'));ts.forEach(t=>b.append($('div','row',`<span>${esc(t.name.replace(/^kabu\\/,''))}</span>${chip(t.st,t.st==='ok'?'成功':'失敗 '+t.result)}<span class="sub">前回 ${esc(t.last||'まだ')} → 次回 ${esc(t.next||'―')}</span>`)))}
+  const ls=S.logs.filter(l=>l.group===g);
+  if(ls.length)b.append($('p','mut','ログの最終書き込み：'+ls.map(l=>esc(l.dir)+' '+esc(l.time)).join('、')));
+  const cs=S.cmds.filter(c=>c.group===g);
+  if(cs.length){const d=$('div','cmds');cs.forEach(c=>{const bt=$('button','',esc(c.label));bt.onclick=()=>send(c.c);d.append(bt)});b.append(d)}
+  m.append(b)}}
+async function load(){try{const r=await fetch('status.json?t='+Date.now(),{cache:'no-store'});if(r.ok){S=await r.json()}else document.getElementById('sub').textContent='状態のファイルがまだない（z10 が最初に上げるのを待つ）'}
+ catch(e){document.getElementById('sub').textContent='読み込めなかった（電波?）'}draw()}
+document.getElementById('reload').onclick=load;
+document.getElementById('forget').onclick=()=>{try{localStorage.removeItem('opsCred')}catch(e){};document.getElementById('cmdmsg').textContent='消した。もう一度使うときは設定リンクを開く。'};
+load();setInterval(()=>{if(document.visibilityState==='visible')load()},60000);
+if(!cred())document.getElementById('cmdmsg').textContent='この端末ではまだ命令を送れない（見るだけはできる）。通知の「管理ページの設定リンク」を1回開くと送れるようになる。';
+</script></body></html>
