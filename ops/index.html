@@ -50,11 +50,13 @@ function draw(){const m=document.getElementById('main');m.innerHTML='';if(!S)ret
  const age=(Date.now()-new Date(S.checked.replace(' ','T')+':00+09:00'))/60000;
  document.getElementById('sub').textContent=`PC が調べた時刻 ${S.checked.slice(5)}（${Math.round(age)}分前）`;
  const w=document.getElementById('warn');w.innerHTML='';
- const bad=S.jobs.filter(j=>j.st==='ng').map(j=>j.label+'：'+j.note).concat(S.tasks.filter(t=>t.st==='ng').map(t=>'タスク '+t.name+' が失敗（'+t.result+'）')).concat(S.kabu.st==='ng'?['kabuステーション：'+S.kabu.note]:[]);
+ const bad=S.jobs.filter(j=>j.st==='ng').map(j=>j.label+'：'+j.note).concat(S.tasks.filter(t=>t.st==='ng').map(t=>'タスク '+t.name+' が失敗（'+t.result+'）')).concat(S.kabu.st==='ng'?['kabuステーション：'+S.kabu.note]:[]).concat((S.checks||[]).map(c=>c.group+'：'+c.msg));
  if(age>45)bad.unshift(`PC から ${Math.round(age)}分 届いていない（PC がスリープ・停止、または管理役 z10 が止まっている）`);
  if(bad.length)w.append($('div','box alert','<h3>要確認</h3>'+bad.map(x=>'<p>'+esc(x)+'</p>').join('')));
  for(const g of ['共通','ボート','競馬','株']){const b=$('div','box',`<h2>${g}</h2>`);
   S.jobs.filter(j=>j.group===g).forEach(j=>b.append($('div','row',`<span>${esc(j.label)}</span>${chip(j.st,j.st==='ok'?'動いている':j.st==='ng'?'要確認':'—')}${j.st==='ok'?'':`<span class="sub">${esc(j.note)}</span>`}`)));
+  if(g==='競馬'&&S.n05){const n=S.n05;b.append($('div','row',`<span>n05 の状態</span>${chip(n.phase==='記録中'?'ok':/停止/.test(n.phase)?'ng':'off',n.phase||'不明')}<span class="sub">n05 が書いた時刻 ${esc(n.updated||'―')}</span>`));
+   n.workers.forEach(w=>b.append($('div','row',`<span>${esc(w.name)}</span>${chip(w.alive?'ok':'off',w.alive?'動いている':'止まっている')}<span class="sub">起動 ${w.starts}回${w.last_exit?'・最後に落ちた '+esc(w.last_exit):''}</span>`)))}
   if(g==='株')b.append($('div','row',`<span>kabuステーション</span>${chip(S.kabu.st,S.kabu.st==='ok'?'応答あり':S.kabu.st==='ng'?'応答なし':'時間外')}<span class="sub">${esc(S.kabu.note)}</span>`));
   if(g==='ボート'){const x=S.boat;b.append($('div','row',`<span>今日の購入</span>${chip(x.stop?'ng':'off',x.stop?'購入停止中':x.bought+'件 '+x.yen.toLocaleString()+'円')}<span class="sub">失敗 ${x.error}件・見送り ${x.skip}件</span>`))}
   const ts=S.tasks.filter(t=>t.group===g);
