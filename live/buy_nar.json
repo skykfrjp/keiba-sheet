@@ -71,9 +71,9 @@
    "venue": "水沢",
    "race_no": 11,
    "post": "17:30",
-   "final": false,
+   "final": true,
    "at": "17:14",
-   "at_final": null,
+   "at_final": "17:25:18",
    "bets": [
     {
      "type": "ワイド",
@@ -87,5 +87,5 @@
    ]
   }
  ],
- "created": "2026-11-24 17:14"
+ "created": "2026-11-24 17:25"
 }
