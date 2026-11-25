@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>ボート11/26 予習シート</title>
+<style>[hidden]{display:none!important}body{margin:0}</style>
+</head><body>
+<style>
+/* 競馬の k54_template と同じ色・部品。1日1ページ、候補レースを締切順のカードで並べる */
+:root{--bg:#f3f5f1;--card:#fff;--fg:#17211b;--mut:#5d6b62;--line:#d5dcd4;--plus:#0b6e4f;--plusbg:#dcf1e6;--minus:#a23a2a;--minusbg:#f8e1dc;--bar:#1f6b45;--gold:#9a6a00;--goldbg:#fbefd0;
+--f:"Hiragino Sans","Yu Gothic UI","Noto Sans JP",system-ui,sans-serif;--num:"SF Mono",ui-monospace,Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111714;--card:#1a221d;--fg:#e6ece7;--mut:#9aa89e;--line:#2f3a33;--plus:#6fd6a6;--plusbg:#163a2b;--minus:#f09a8a;--minusbg:#45211b;--bar:#5cc48f;--gold:#f0c060;--goldbg:#3a2f12;color-scheme:dark}}
+body{background:var(--bg);color:var(--fg);font-family:var(--f);font-size:15px;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:14px 48px;display:flex;flex-direction:column;gap:14px}
+h1{font-size:20px;margin:0;text-wrap:balance}h2{font-size:17px;margin:0}h3{font-size:13px;margin:0;color:var(--mut);font-weight:600;letter-spacing:.04em}
+p{margin:0}.mut{color:var(--mut);font-size:13px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;display:flex;gap:6px;overflow-x:auto;padding-block:8px;border-bottom:1px solid var(--line)}
+nav button{flex:0 0 auto;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:600 14px var(--f);cursor:pointer}
+nav button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+button.rl{font:600 14px var(--f);padding:8px 14px;border-radius:8px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
+nav button:focus-visible,summary:focus-visible{outline:2px solid var(--bar);outline-offset:2px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}.kpi div{display:flex;flex-direction:column}.kpi>div>span{font-size:12px;color:var(--mut)}.kpi b{font:700 18px var(--num)}
+.tw{overflow-x:auto}table{border-collapse:collapse;font-size:13px;width:100%}th,td{padding:4px 6px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+th:nth-child(-n+2),td:nth-child(-n+2){text-align:left}th{color:var(--mut);font-weight:600}
+.pl{color:var(--plus);font-weight:700}.mi{color:var(--minus);font-weight:700}
+.race{background:var(--card);border:1px solid var(--line);border-radius:10px}
+.race.next{border:2px solid var(--bar)}.race.done{opacity:.72}.race.bought{border:2px solid var(--gold)}
+.race summary{list-style:none;cursor:pointer;padding:10px 12px;display:grid;grid-template-columns:52px 1fr auto;gap:4px 10px;align-items:center}
+.race summary::-webkit-details-marker{display:none}
+.dl{font:700 15px var(--num);text-align:center}.dl small{display:block;font:11px var(--f);color:var(--mut)}
+.nm{font-weight:700;min-width:0;overflow-wrap:anywhere}.sub{font-size:12px;color:var(--mut);font-weight:400}
+.tier{font:700 15px var(--f);text-align:right}.tier small{display:block;font-size:11px;color:var(--mut);font-weight:400}
+.rec{grid-column:1/-1;font:13px var(--num);color:var(--mut)}.rec b{color:var(--fg)}
+.chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:11.5px;padding:1px 7px;border-radius:10px;font-weight:600;background:var(--line);color:var(--fg)}
+.chip.p{background:var(--plusbg);color:var(--plus)}.chip.m{background:var(--minusbg);color:var(--minus)}.chip.g{background:var(--goldbg);color:var(--gold)}
+.det{padding:10px 12px 12px;display:flex;flex-direction:column;gap:10px;border-top:1px dashed var(--line)}
+.bn{display:inline-block;width:20px;text-align:center;font:700 13px var(--num);border-radius:4px;border:1px solid var(--line)}
+.b1{background:#fff;color:#111}.b2{background:#111;color:#fff}.b3{background:#d62b2b;color:#fff}.b4{background:#2459c6;color:#fff}.b5{background:#f2d21b;color:#111}.b6{background:#1f9a4a;color:#fff}
+.links{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}.links a{color:var(--bar)}
+ul{margin:0;padding-left:1.2em;font-size:13.5px}li{margin-block:3px}
+details.note summary{cursor:pointer;font-weight:700}
+</style>
+<div class="wrap">
+<header><h1>ボート 11月26日（木）予習シート</h1><p class="mut">候補 27 レース（1号艇が B1・42歳以下）。締切順。タップで6艇の表。　<a href="index.html" style="color:var(--bar)">ほかの日</a>・<a href="../index.html" style="color:var(--bar)">トップ</a></p></header>
+<details class="box note"><summary>読み方</summary>
+<ul>
+<li><b>買うのは1号艇の単勝だけ。</b>締切6分前に、1号艇の展示タイムが6艇で1位・風3m以下（ルールA）なら判定に乗る。</li>
+<li><b>★★</b>＝ルールA で、他の艇に A1 がちょうど2人。<b>★</b>＝ルールA で、ST差が −0.02 より大きい（1号艇の平均STが、他艇で一番速い平均STより 0.02秒以上は遅くない）。<b>無印</b>＝ルールA だけ（買わない）。</li>
+<li>朝の時点では展示がまだないので、<b>★★候補・★候補</b>は「展示1位・風3m以下になったらその段階になる」という意味。候補でもほとんどは展示で外れる。</li>
+<li>買う金額 <span id="stk"></span>。展示で1号艇が1コースに入らないときは買わない。</li>
+<li>平均STは直近30走（フライング・出遅れを除く）。モーターは2連率。級・勝率は番組表のもの。</li>
+<li>結果は締切の約15分後に公式の結果ページから取る速報。翌朝の突き合わせで確定の値に置き換わる。</li>
+<li>検証（2023〜25年で作り、2026年で確認）の回収率は100%を少し超える程度で、外れが続く日もある。</li>
+</ul></details>
+<div class="box"><h3>今日の判定・購入・収支</h3>
+<div class="kpi" id="kpi"></div>
+<p id="live-msg" class="mut">読み込み中…</p>
+<p><button type="button" id="live-reload" class="rl">最新にする</button> <span class="mut">開いている間は2分おきに自動で読み直す。</span></p></div>
+<nav id="nav" aria-label="絞り込み"></nav>
+<main id="main" style="display:flex;flex-direction:column;gap:10px"></main>
+</div>
+<script>
+const D={"date":"20261126","iso":"2026-11-26","races":[{"id":"20261126_05_01","jcd":"05","ven":"多摩川","R":1,"dl":"10:33","name":"倉田茂将","toban":"5039","age":28,"cls":"B1","pst":0.147,"omin":0.14,"gap":-0.007,"a1":0,"boats":[[1,"倉田茂将","B1",28,4.61,5.87,24,22.22,0.15,"5039"],[2,"藤森拓海","B1",22,3.94,3.78,60,26.61,0.14,"5308"],[3,"東潤樹","A2",38,5.75,5.81,36,38.41,0.17,"4574"],[4,"植竹玲奈","B1",19,3.45,1.68,27,41.35,0.23,"5361"],[5,"伊藤尚汰","B1",31,4.36,0.0,30,28.32,0.18,"5022"],[6,"北萌々花","B2",20,0.75,0.0,54,43.07,0.25,"5487"]]},{"id":"20261126_10_05","jcd":"10","ven":"三国","R":5,"dl":"10:37","name":"小林遼太","toban":"4638","age":36,"cls":"B1","pst":0.181,"omin":0.155,"gap":-0.026,"a1":2,"boats":[[1,"小林遼太","B1",36,5.65,5.9,33,35.29,0.18,"4638"],[2,"藤田俊祐","B1",24,5.93,4.91,17,35.29,0.15,"5226"],[3,"笠置博之","A1",36,6.1,5.62,69,30.49,0.16,"4538"],[4,"宮地博士","B1",47,3.65,3.44,20,35.47,0.21,"3964"],[5,"馬袋義則","A1",54,6.67,7.03,23,40.48,0.16,"3612"],[6,"吉田俊彦","A2",48,6.53,5.55,49,37.36,0.19,"4055"]]},{"id":"20261126_11_02","jcd":"11","ven":"びわこ","R":2,"dl":"10:49","name":"幸野史明","toban":"4406","age":41,"cls":"B1","pst":0.162,"omin":0.136,"gap":-0.026,"a1":0,"boats":[[1,"幸野史明","B1",41,3.81,3.53,48,29.22,0.16,"4406"],[2,"小野勇作","B1",48,5.24,0.0,69,26.06,0.18,"4006"],[3,"川尻泰輔","A2",44,5.81,4.95,23,31.21,0.14,"4175"],[4,"北川太一","A2",33,5.43,6.8,24,27.83,0.19,"4718"],[5,"鈴木裕隆","B1",43,5.47,4.0,14,36.57,0.18,"4231"],[6,"渡辺豊","B1",59,4.67,4.81,16,28.57,0.18,"3303"]]},{"id":"20261126_03_01","jcd":"03","ven":"江戸川","R":1,"dl":"10:59","name":"中島航","toban":"5070","age":32,"cls":"B1","pst":0.187,"omin":0.143,"gap":-0.044,"a1":0,"boats":[[1,"中島航","B1",32,4.24,4.75,61,37.5,0.19,"5070"],[2,"川上清人","B1",46,3.88,6.09,70,25.83,0.16,"4020"],[3,"多田有佑","B1",44,3.68,4.21,67,22.41,0.18,"4169"],[4,"坪内実","B1",60,4.08,4.92,53,34.21,0.19,"3370"],[5,"長尾京志","B1",37,4.78,4.63,43,32.73,0.14,"4632"],[6,"櫻井隼","B1",20,2.35,2.33,12,32.46,0.19,"5419"]]},{"id":"20261126_05_02","jcd":"05","ven":"多摩川","R":2,"dl":"11:01","name":"稲生夏季","toban":"4484","age":36,"cls":"B1","pst":0.214,"omin":0.147,"gap":-0.067,"a1":1,"boats":[[1,"稲生夏季","B1",36,4.7,4.74,18,37.04,0.21,"4484"],[2,"新田洋一","B1",33,5.01,0.0,16,21.19,0.16,"4951"],[3,"加藤啓太","B1",43,4.36,5.67,48,30.09,0.15,"4665"],[4,"岩下巧斗","B1",24,5.3,3.67,33,24.19,0.17,"5301"],[5,"前田篤哉","A1",29,6.55,6.66,26,30.23,0.16,"4983"],[6,"梅澤直未","B2",23,0.0,0.0,74,29.63,NaN,"5480"]]},{"id":"20261126_03_02","jcd":"03","ven":"江戸川","R":2,"dl":"11:25","name":"宮崎心之","toban":"5368","age":24,"cls":"B1","pst":0.129,"omin":0.113,"gap":-0.016,"a1":1,"boats":[[1,"宮崎心之","B1",24,6.23,5.0,28,42.24,0.13,"5368"],[2,"飯田庄吾","B1",32,4.23,4.32,54,24.58,0.18,"4803"],[3,"早川尚人","B1",44,4.84,3.94,68,29.2,0.17,"4200"],[4,"山田晃大","A2",36,5.87,6.37,14,22.12,0.11,"4761"],[5,"水谷理人","A1",24,6.97,6.93,56,43.24,0.15,"5298"],[6,"堀井涼平","B2",23,1.39,0.0,39,23.64,0.16,"5449"]]},{"id":"20261126_03_03","jcd":"03","ven":"江戸川","R":3,"dl":"11:51","name":"廣瀬篤哉","toban":"4992","age":29,"cls":"B1","pst":0.146,"omin":0.143,"gap":-0.003,"a1":0,"boats":[[1,"廣瀬篤哉","B1",29,4.8,5.29,66,19.64,0.15,"4992"],[2,"杉山太陽","B1",25,3.92,4.33,58,25.66,0.15,"5271"],[3,"伊藤紘章","B1",40,4.04,5.17,18,28.81,0.21,"4626"],[4,"尾崎雄二","A2",41,4.71,4.0,52,46.36,0.14,"4695"],[5,"佐藤右京","B1",25,4.88,3.56,55,34.17,0.17,"5292"],[6,"岡部貴司","B1",52,5.14,6.02,46,33.9,0.15,"3708"]]},{"id":"20261126_18_08","jcd":"18","ven":"徳山","R":8,"dl":"12:04","name":"瀬川大地","toban":"5336","age":20,"cls":"B1","pst":0.174,"omin":0.118,"gap":-0.056,"a1":2,"boats":[[1,"瀬川大地","B1",20,3.33,2.56,62,29.77,0.17,"5336"],[2,"長谷川晴","A1",26,6.0,5.18,18,31.75,0.16,"5216"],[3,"杉江浩明","B1",48,3.64,4.11,19,46.72,0.18,"4035"],[4,"田中宏樹","A2",38,5.41,5.0,27,34.17,0.16,"4861"],[5,"古賀繁輝","A1",40,6.57,6.0,33,55.7,0.12,"4294"],[6,"吉田翔悟","B1",35,4.85,2.71,29,34.18,0.15,"4919"]]},{"id":"20261126_05_05","jcd":"05","ven":"多摩川","R":5,"dl":"12:26","name":"荒牧凪沙","toban":"5041","age":28,"cls":"B1","pst":0.203,"omin":0.141,"gap":-0.062,"a1":1,"boats":[[1,"荒牧凪沙","B1",28,4.93,5.25,67,39.84,0.2,"5041"],[2,"永田秀二","A2",41,5.93,5.89,70,34.35,0.14,"4430"],[3,"品川二千","A1",28,6.6,4.75,59,24.07,0.17,"5064"],[4,"北萌々花","B2",20,0.75,0.0,54,43.07,0.25,"5487"],[5,"村上宗太","B2",24,4.97,4.89,61,43.97,0.19,"5201"],[6,"塩崎優司","B1",54,4.25,5.76,58,34.13,0.14,"3730"]]},{"id":"20261126_23_09","jcd":"23","ven":"唐津","R":9,"dl":"12:29","name":"木村亮太","toban":"4648","age":42,"cls":"B1","pst":0.12,"omin":0.115,"gap":-0.005,"a1":1,"boats":[[1,"木村亮太","B1",42,5.78,5.15,1,36.36,0.12,"4648"],[2,"三苫晃幸","A2",40,6.3,5.31,2,20.59,0.15,"4463"],[3,"松下一也","A1",43,5.87,5.94,51,23.81,0.12,"4207"],[4,"小林基樹","B1",47,3.86,5.23,54,32.56,0.21,"4041"],[5,"富永夏哉","B1",23,4.98,4.01,63,40.48,0.14,"5307"],[6,"青木幸太","A2",42,5.85,5.82,30,33.33,0.16,"4314"]]},{"id":"20261126_03_05","jcd":"03","ven":"江戸川","R":5,"dl":"12:43","name":"竹之内極","toban":"4957","age":31,"cls":"B1","pst":0.164,"omin":0.139,"gap":-0.025,"a1":2,"boats":[[1,"竹之内極","B1",31,5.42,6.32,64,49.56,0.16,"4957"],[2,"尾嶋一広","A1",39,6.4,6.31,17,40.18,0.14,"4472"],[3,"磯村匠","B1",35,4.75,5.39,23,30.91,0.21,"4641"],[4,"櫻井隼","B1",20,2.35,2.33,12,32.46,0.19,"5419"],[5,"村上遼","A1",34,6.43,5.0,16,37.93,0.14,"4715"],[6,"星野太郎","B1",50,4.88,0.0,35,25.22,0.18,"3842"]]},{"id":"20261126_05_06","jcd":"05","ven":"多摩川","R":6,"dl":"12:52","name":"植竹玲奈","toban":"5361","age":19,"cls":"B1","pst":0.226,"omin":0.139,"gap":-0.087,"a1":0,"boats":[[1,"植竹玲奈","B1",19,3.45,1.68,27,41.35,0.23,"5361"],[2,"山口真喜","A2",29,5.99,6.0,34,30.77,0.14,"5129"],[3,"根岸真優","B1",24,4.24,2.04,37,36.0,0.17,"5322"],[4,"北村寧々","A2",25,5.65,5.8,12,27.03,0.14,"5195"],[5,"稲生夏季","B1",36,4.7,4.74,18,37.04,0.21,"4484"],[6,"梅澤直未","B2",23,0.0,0.0,74,29.63,NaN,"5480"]]},{"id":"20261126_18_11","jcd":"18","ven":"徳山","R":11,"dl":"13:42","name":"高井駿弥","toban":"5211","age":28,"cls":"B1","pst":0.144,"omin":0.12,"gap":-0.023,"a1":1,"boats":[[1,"高井駿弥","B1",28,3.49,2.47,20,37.19,0.14,"5211"],[2,"高倉和士","A1",35,7.37,6.62,65,23.7,0.12,"4736"],[3,"川島圭司","A2",43,5.66,5.7,67,29.22,0.13,"4254"],[4,"渡邉英児","A2",57,6.08,6.13,35,34.87,0.15,"3502"],[5,"山崎鉄平","B1",31,5.17,4.68,15,38.64,0.14,"4879"],[6,"川原正明","B1",52,6.35,5.1,11,26.71,0.12,"3912"]]},{"id":"20261126_05_08","jcd":"05","ven":"多摩川","R":8,"dl":"13:48","name":"田代達也","toban":"4944","age":35,"cls":"B1","pst":0.145,"omin":0.14,"gap":-0.006,"a1":0,"boats":[[1,"田代達也","B1",35,4.22,3.81,23,37.6,0.15,"4944"],[2,"伊藤尚汰","B1",31,4.36,0.0,30,28.32,0.18,"5022"],[3,"柳瀬興志","A2",57,4.71,6.5,32,47.55,0.17,"3661"],[4,"新田洋一","B1",33,5.01,0.0,16,21.19,0.16,"4951"],[5,"藤森拓海","B1",22,3.94,3.78,60,26.61,0.14,"5308"],[6,"金子萌","A2",36,6.39,5.33,28,41.28,0.15,"4793"]]},{"id":"20261126_03_08","jcd":"03","ven":"江戸川","R":8,"dl":"14:02","name":"飯田庄吾","toban":"4803","age":32,"cls":"B1","pst":0.177,"omin":0.143,"gap":-0.034,"a1":0,"boats":[[1,"飯田庄吾","B1",32,4.23,4.32,54,24.58,0.18,"4803"],[2,"吉田宗弘","B1",45,4.28,5.29,51,32.77,0.17,"4093"],[3,"篠原飛翔","A2",28,5.47,5.13,25,31.36,0.18,"5081"],[4,"成田華音","B2",19,2.17,0.0,65,37.61,0.2,"5466"],[5,"尾崎雄二","A2",41,4.71,4.0,52,46.36,0.14,"4695"],[6,"川上清人","B1",46,3.88,6.09,70,25.83,0.16,"4020"]]},{"id":"20261126_12_01","jcd":"12","ven":"住之江","R":1,"dl":"15:17","name":"山田佑樹","toban":"4323","age":40,"cls":"B1","pst":0.131,"omin":0.17,"gap":0.039,"a1":0,"boats":[[1,"山田佑樹","B1",40,6.49,4.49,20,42.66,0.13,"4323"],[2,"常盤海心","B1",25,4.6,2.43,65,20.3,0.2,"5143"],[3,"有山望","B1",22,3.22,2.2,76,18.9,0.17,"5381"],[4,"齋藤和政","B1",55,3.63,2.89,73,36.76,0.18,"3637"],[5,"森下勇","B1",53,3.51,2.9,50,29.08,0.18,"3652"],[6,"阿久根芳","B2",23,1.38,0.0,55,34.62,0.22,"5481"]]},{"id":"20261126_12_02","jcd":"12","ven":"住之江","R":2,"dl":"15:42","name":"大塚雅治","toban":"5063","age":28,"cls":"B1","pst":0.17,"omin":0.15,"gap":-0.021,"a1":0,"boats":[[1,"大塚雅治","B1",28,4.35,4.5,21,23.88,0.17,"5063"],[2,"山下拓巳","B1",25,3.46,3.89,11,40.44,0.2,"5273"],[3,"冨田秀幸","B1",58,3.96,4.84,38,42.55,0.17,"3519"],[4,"大森翼","B1",24,4.07,3.95,66,37.4,0.18,"5247"],[5,"赤松咲香","B2",24,1.72,1.85,29,47.06,0.17,"5367"],[6,"中村有裕","A2",47,6.52,6.02,14,28.37,0.15,"4012"]]},{"id":"20261126_19_02","jcd":"19","ven":"下関","R":2,"dl":"15:46","name":"南野利騰","toban":"4405","age":41,"cls":"B1","pst":0.164,"omin":0.135,"gap":-0.029,"a1":0,"boats":[[1,"南野利騰","B1",41,4.69,3.5,25,27.48,0.16,"4405"],[2,"廣中智紗","A2",45,6.22,6.8,55,37.69,0.17,"4117"],[3,"古場輝義","B1",66,4.67,4.29,35,26.72,0.18,"3161"],[4,"泉具巳","B1",61,4.58,5.57,45,25.81,0.13,"3339"],[5,"小林京平","B1",28,6.02,4.05,48,32.85,0.14,"5311"],[6,"福山恵里","B1",30,3.73,3.68,51,31.54,0.17,"5123"]]},{"id":"20261126_15_02","jcd":"15","ven":"丸亀","R":2,"dl":"15:54","name":"中尾彩香","toban":"5144","age":25,"cls":"B1","pst":0.148,"omin":0.129,"gap":-0.019,"a1":1,"boats":[[1,"中尾彩香","B1",25,4.74,3.25,63,32.43,0.15,"5144"],[2,"堀本裕也","B2",50,3.29,3.56,28,40.0,0.18,"3895"],[3,"上野秀和","A2",43,5.64,4.79,13,17.5,0.15,"4180"],[4,"中井俊祐","B1",46,4.22,5.94,10,13.79,0.13,"4138"],[5,"岡谷健吾","B1",44,5.1,5.09,30,20.0,0.18,"4173"],[6,"坂本雄紀","A1",32,5.35,5.52,32,39.47,0.15,"5150"]]},{"id":"20261126_19_03","jcd":"19","ven":"下関","R":3,"dl":"16:14","name":"萩原丈太","toban":"5355","age":22,"cls":"B1","pst":0.178,"omin":0.127,"gap":-0.052,"a1":0,"boats":[[1,"萩原丈太","B1",22,3.11,2.85,20,28.32,0.18,"5355"],[2,"山田竜一","A2",55,5.43,5.46,27,33.86,0.14,"3505"],[3,"池千夏","B1",55,3.87,4.17,15,33.6,0.16,"3509"],[4,"関根彰人","B1",42,4.63,0.0,41,27.19,0.19,"4258"],[5,"天堵基華","B2",20,2.0,0.0,44,31.69,0.13,"5488"],[6,"森定晃史","A2",44,5.55,4.67,63,42.74,0.14,"4172"]]},{"id":"20261126_12_03","jcd":"12","ven":"住之江","R":3,"dl":"16:19","name":"梅木敬太","toban":"4876","age":32,"cls":"B1","pst":0.183,"omin":0.121,"gap":-0.062,"a1":1,"boats":[[1,"梅木敬太","B1",32,4.79,5.55,22,43.48,0.18,"4876"],[2,"荒木颯斗","A2",24,6.24,0.0,34,28.26,0.12,"5252"],[3,"松本浩貴","B1",53,3.82,4.14,15,32.39,0.18,"3860"],[4,"上田紗奈","B1",30,5.57,5.42,27,36.5,0.15,"5057"],[5,"石井孝之","B1",35,4.66,5.21,30,25.37,0.13,"4766"],[6,"渡邉俊介","A1",40,5.98,6.41,79,37.59,0.13,"4467"]]},{"id":"20261126_19_04","jcd":"19","ven":"下関","R":4,"dl":"16:41","name":"楠原翔太","toban":"4684","age":35,"cls":"B1","pst":0.125,"omin":0.125,"gap":-0.0,"a1":0,"boats":[[1,"楠原翔太","B1",35,5.58,4.91,71,39.84,0.12,"4684"],[2,"松井洪弥","A2",33,6.45,6.43,31,36.92,0.12,"4824"],[3,"笹木香吾","A2",27,6.13,3.85,37,25.23,0.15,"5238"],[4,"渡部悟","B1",38,5.12,6.1,65,34.65,0.16,"4572"],[5,"中澤里桜","B2",21,1.65,1.44,36,28.95,0.23,"5437"],[6,"三好勇人","A2",43,5.5,5.85,47,30.23,0.15,"4331"]]},{"id":"20261126_15_05","jcd":"15","ven":"丸亀","R":5,"dl":"17:22","name":"橋本英一","toban":"4866","age":36,"cls":"B1","pst":0.161,"omin":0.129,"gap":-0.032,"a1":1,"boats":[[1,"橋本英一","B1",36,4.72,2.17,62,46.15,0.16,"4866"],[2,"泥谷一毅","B1",45,6.04,0.0,4,29.41,0.15,"4119"],[3,"井手良太","A2",39,5.59,3.75,45,39.47,0.13,"4675"],[4,"西川新太","B1",46,5.04,4.7,29,26.32,0.16,"4016"],[5,"蜂須瑞生","A2",35,4.68,3.63,57,11.43,0.16,"4819"],[6,"松田大志","A1",38,7.21,7.63,66,20.69,0.16,"4544"]]},{"id":"20261126_19_07","jcd":"19","ven":"下関","R":7,"dl":"18:04","name":"福山恵里","toban":"5123","age":30,"cls":"B1","pst":0.167,"omin":0.127,"gap":-0.041,"a1":0,"boats":[[1,"福山恵里","B1",30,3.73,3.68,51,31.54,0.17,"5123"],[2,"西村歩","B1",40,5.55,5.95,11,35.14,0.17,"4243"],[3,"日隈茜","B2",24,1.52,1.38,22,23.08,0.19,"5370"],[4,"佐藤ほの","B1",30,3.65,4.04,68,29.55,0.18,"5153"],[5,"池千夏","B1",55,3.87,4.17,15,33.6,0.16,"3509"],[6,"天堵基華","B2",20,2.0,0.0,44,31.69,0.13,"5488"]]},{"id":"20261126_19_08","jcd":"19","ven":"下関","R":8,"dl":"18:32","name":"小林京平","toban":"5311","age":28,"cls":"B1","pst":0.137,"omin":0.135,"gap":-0.002,"a1":1,"boats":[[1,"小林京平","B1",28,6.02,4.05,48,32.85,0.14,"5311"],[2,"泉具巳","B1",61,4.58,5.57,45,25.81,0.13,"3339"],[3,"佐藤太亮","B1",25,5.9,4.06,26,15.93,0.16,"5170"],[4,"三好勇人","A2",43,5.5,5.85,47,30.23,0.15,"4331"],[5,"鈴谷一平","A1",32,6.28,4.88,69,44.44,0.14,"4877"],[6,"中澤里桜","B2",21,1.65,1.44,36,28.95,0.23,"5437"]]},{"id":"20261126_19_10","jcd":"19","ven":"下関","R":10,"dl":"19:32","name":"大井清貴","toban":"4425","age":41,"cls":"B1","pst":0.169,"omin":0.137,"gap":-0.031,"a1":0,"boats":[[1,"大井清貴","B1",41,4.59,4.51,57,40.94,0.17,"4425"],[2,"古場輝義","B1",66,4.67,4.29,35,26.72,0.18,"3161"],[3,"関根彰人","B1",42,4.63,0.0,41,27.19,0.19,"4258"],[4,"笹木香吾","A2",27,6.13,3.85,37,25.23,0.15,"5238"],[5,"山田竜一","A2",55,5.43,5.46,27,33.86,0.14,"3505"],[6,"中田元泰","A2",40,6.41,6.81,73,26.36,0.17,"4437"]]},{"id":"20261126_20_12","jcd":"20","ven":"若松","R":12,"dl":"20:30","name":"水野望美","toban":"4678","age":38,"cls":"B1","pst":0.179,"omin":0.149,"gap":-0.03,"a1":0,"boats":[[1,"水野望美","B1",38,4.26,3.8,1,0.0,0.18,"4678"],[2,"小池礼乃","B1",36,5.48,5.0,41,0.0,0.15,"4764"],[3,"魚谷香織","A2",41,7.12,5.37,7,0.0,0.19,"4347"],[4,"古園井綾","B2",24,1.04,0.0,53,0.0,0.19,"5428"],[5,"高田綾","B1",41,5.1,4.5,3,0.0,0.18,"4694"],[6,"川原愛未","B2",24,3.87,3.85,24,0.0,0.17,"5227"]]}],"stakes":{"★★":2000,"★":1000,"無印":0},"made":"07:32"};
+const $=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const f2=v=>v==null?'―':Number(v).toFixed(2), f1=v=>v==null||v===''?'―':Number(v).toFixed(1);
+const yen=v=>(v<0?'−':'')+'¥'+Math.abs(Math.round(v)).toLocaleString();
+let L={races:{},buys:[]},LOADED=false,FILTER=localStorage.getItem('bf')||'all';
+document.getElementById('stk').textContent=Object.entries(D.stakes).map(([k,v])=>`${k} ${v?v+'円':'買わない'}`).join('・');
+function dlDate(r){const [h,m]=r.dl.split(':').map(Number);return new Date(+D.date.slice(0,4),+D.date.slice(4,6)-1,+D.date.slice(6),h,m)}
+function pre(r){if(r.a1===2)return '★★候補';if(r.gap!=null&&r.gap>-0.02)return '★候補';return '無印候補'}
+function buyOf(r){const bs=L.buys.filter(b=>b.race_id===r.id);return bs.length?bs[bs.length-1]:null}
+function stateOf(r){const v=L.races[r.id]||{};const b=buyOf(r);const now=new Date(),dl=dlDate(r);
+ return {v,b,checked:!!v.checked_at,past:now>dl,bought:b&&b.status==='bought',res:v.win!==undefined&&v.win!==''?+v.win:null,cancel:!!v.cancel}}
+function why(v){const o=[];if(v.exr&&+v.exr!==1)o.push('展示'+v.exr+'位');if(v.wind_m!==undefined&&+v.wind_m>3)o.push('風'+v.wind_m+'m');if(v.note)o.push(v.note);return o.join('・')||'条件に届かず'}
+function card(r,isNext){const s=stateOf(r),v=s.v;const d=$('details','race'+(isNext?' next':'')+(s.bought?' bought':'')+(s.past&&!isNext?' done':''));
+ const tier=s.checked?(v.tier||'対象外'):pre(r);
+ const tcls=s.checked?(v.tier==='★★'||v.tier==='★'?'pl':v.tier?'':'mut'):'mut';
+ let st='';
+ if(s.cancel)st='中止';
+ else if(s.res!=null)st=s.res?`<span class="pl">1着 ¥${v.tanpay}</span>`:`<span class="mi">${v.first?v.first+'号艇の勝ち':'外れ'}</span>`;
+ else if(s.past)st=s.checked?'結果待ち':'締切済';
+ else st=s.checked?'判定済':'締切前';
+ let h=`<summary><span class="dl">${esc(r.dl)}<small>${esc(r.ven)}${r.R}R</small></span><span class="nm">${esc(r.name)}<div class="sub">1号艇 ${esc(r.cls)}・${r.age??'?'}歳・平均ST ${f2(r.pst)}</div></span><span class="tier"><span class="${tcls}">${esc(tier)}</span><small>${st}</small></span>`;
+ h+=`<span class="rec">ST差 <b>${r.gap==null?'―':(r.gap>0?'+':'')+r.gap.toFixed(2)}</b>（他艇の最速 ${f2(r.omin)}）・他艇のA1 <b>${r.a1}人</b></span>`;
+ if(s.checked)h+=`<span class="rec">展示 <b>${v.exr?v.exr+'位':'―'}</b>・風 <b>${v.wind_m??'―'}m</b>・進入 <b>${v.course1?v.course1+'コース':'―'}</b>・単勝 6分前 <b>${f1(v.odds6)}</b> → 1分前 <b>${f1(v.odds1)}</b>　<span class="mut">${esc(v.checked_at||'')}</span></span>`;
+ const ch=[];
+ if(s.checked&&!v.tier)ch.push(`<span class="chip m">${esc(why(v))}</span>`);
+ if(s.b){const m={bought:['g','買った '+s.b.yen+'円'],skip:['','見送り：'+s.b.message],error:['m','失敗：'+s.b.message]}[s.b.status]||['',s.b.status];ch.push(`<span class="chip ${m[0]}">${esc(m[1])}</span>`)}
+ else if(v.buy)ch.push(`<span class="chip">${esc(v.buy)}</span>`);
+ if(s.bought&&s.res!=null)ch.push(`<span class="chip ${s.res?'p':'m'}">${s.res?'払戻 '+yen(s.b.yen/100*v.tanpay):'−'+s.b.yen+'円'}${v.src==='速報'?'（速報）':''}</span>`);
+ if(ch.length)h+=`<span class="chips">${ch.join('')}</span>`;
+ h+='</summary>';
+ let t='<div class="det">';
+ if(r.boats.length){const omin=Math.min(...r.boats.filter(b=>b[0]!==1&&b[8]!=null).map(b=>b[8]));
+  t+=`<div class="tw"><table><thead><tr><th>艇</th><th>選手</th><th>級</th><th>年齢</th><th>全国勝率</th><th>当地勝率</th><th>モーター</th><th>平均ST</th></tr></thead><tbody>`+
+  r.boats.map(b=>`<tr><td><span class="bn b${b[0]}">${b[0]}</span></td><td>${esc(b[1])}</td><td>${b[2]==='A1'&&b[0]!==1?'<b class="mi">A1</b>':esc(b[2])}</td><td>${b[3]??'―'}</td><td>${f2(b[4])}</td><td>${f2(b[5])}</td><td>${b[6]??''}号 ${f1(b[7])}%</td><td>${b[8]!=null&&b[0]!==1&&b[8]===omin?'<b>'+f2(b[8])+'</b>':f2(b[8])}</td></tr>`).join('')+'</tbody></table></div>';
+  t+='<p class="mut">赤の A1＝他艇の A1（★★は2人ちょうど）。太字の平均ST＝他艇で一番速い（ST差の基準）。</p>'}
+ else t+='<p class="mut">6艇の表は番組表が読めなかったので出していない。</p>';
+ const u=p=>`https://www.boatrace.jp/owpc/pc/race/${p}?rno=${r.R}&jcd=${r.jcd}&hd=${D.date}`;
+ t+=`<div class="links"><a href="${u('racelist')}" target="_blank" rel="noopener">出走表</a><a href="${u('beforeinfo')}" target="_blank" rel="noopener">直前情報</a><a href="${u('oddstf')}" target="_blank" rel="noopener">単勝オッズ</a><a href="${u('raceresult')}" target="_blank" rel="noopener">結果</a></div>`;
+ if(s.b&&s.b.status==='error')t+=`<p class="mi">購入の失敗：${esc(s.b.message)}（${esc(s.b.time)}）</p>`;
+ d.innerHTML=h+t+'</div>';d.id='r'+r.id;return d}
+const FIL=[['all','全部'],['star','★★・★'],['todo','これから'],['buy','買った'],['done','終わった']];
+function pass(r,f){const s=stateOf(r),v=s.v;if(f==='all')return true;
+ if(f==='star')return s.checked?(v.tier==='★★'||v.tier==='★'):pre(r)!=='無印候補';
+ if(f==='todo')return !s.past;if(f==='buy')return !!s.bought;if(f==='done')return s.past;return true}
+function kpi(){let ck=0,st2=0,st1=0,nb=0,spent=0,ret=0,hit=0,set=0,setSp=0;
+ D.races.forEach(r=>{const s=stateOf(r),v=s.v;if(s.checked)ck++;if(v.tier==='★★')st2++;if(v.tier==='★')st1++;
+  if(s.bought){nb++;spent+=+s.b.yen;if(s.res!=null){set++;setSp+=+s.b.yen;if(s.res){hit++;ret+=s.b.yen/100*v.tanpay}}}});
+ const pf=ret-setSp;
+ document.getElementById('kpi').innerHTML=[['判定済み',ck+'/'+D.races.length],['★★ / ★',st2+' / '+st1],['買った',nb+'件 '+yen(spent)],['的中',set?hit+'/'+set:'―'],
+  ['収支（結果が出た分）',set?`<span class="${pf>=0?'pl':'mi'}">${yen(pf)}</span>`:'―']].map(([a,b])=>`<div><span>${a}</span><b>${b}</b></div>`).join('')}
+function draw(){kpi();const m=document.getElementById('main');const open=new Set([...m.querySelectorAll('details[open]')].map(e=>e.id));m.innerHTML='';
+ const now=new Date();const nx=D.races.find(r=>dlDate(r)>now);
+ const list=D.races.filter(r=>pass(r,FILTER));
+ if(!list.length)m.append($('p','mut','このしぼり込みに当たるレースはない。'));
+ list.forEach(r=>{const c=card(r,nx===r);if(open.has(c.id))c.open=true;m.append(c)})}
+const nav=document.getElementById('nav');
+FIL.forEach(([k,lab])=>{const b=$('button','',lab);b.onclick=()=>{FILTER=k;try{localStorage.setItem('bf',k)}catch(e){};[...nav.children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};b.setAttribute('aria-pressed',k===FILTER);nav.append(b)});
+async function refresh(){const msg=document.getElementById('live-msg'),btn=document.getElementById('live-reload');
+ btn.disabled=true;btn.textContent='読み込み中…';const now=new Date(),hm=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
+ try{const r=await fetch('live/20261126.json?t='+Date.now(),{cache:'no-store'});if(r.ok){const j=await r.json();if(j.date==='20261126'){L=j;LOADED=true;
+  const nx=D.races.find(x=>!(j.races[x.id]||{}).checked_at&&dlDate(x)>now);
+  const nt=nx?(()=>{const t=new Date(dlDate(nx)-6*60000);return `次の判定は ${nx.ven}${nx.R}R（${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}ごろ）。`})():'今日の判定はすべて済んだ。';
+  msg.textContent=`${hm} に確認。中身が最後に変わったのは ${j.created.slice(11)}（PC は3分おきに見て、変わったときだけ上げる）。判定 ${Object.values(j.races).filter(v=>v.checked_at).length} レース・購入の記録 ${j.buys.length} 件。${nt}`}
+  else msg.textContent='live のファイルが別の日のもの。'}
+ else msg.textContent=LOADED?msg.textContent:'判定のファイルがまだない（PC の b70 が上げるのを待つ）。'}catch(e){msg.textContent=hm+' 読み込めなかった（電波が弱いかも）。もう一度押す。'}
+ btn.disabled=false;btn.textContent='最新にする';draw()}
+document.getElementById('live-reload').addEventListener('click',refresh);
+draw();refresh();
+setInterval(()=>{if(document.visibilityState==='visible')refresh()},120000);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refresh()});
+</script>
+</body></html>
