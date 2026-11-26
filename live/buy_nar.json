@@ -1,157 +1,25 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-26",
  "races": [
   {
-   "venue": "園田",
-   "race_no": 5,
-   "post": "12:45",
-   "final": true,
-   "at": "12:29",
-   "at_final": "12:40:23",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      2,
-      3
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 1,
-   "post": "14:40",
-   "final": true,
-   "at": "14:24",
-   "at_final": "14:35:12",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      9
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 2,
-   "post": "15:15",
-   "final": true,
-   "at": "14:59",
-   "at_final": "15:10:15",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      8,
-      11
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 3,
-   "post": "15:50",
-   "final": true,
-   "at": "15:34",
-   "at_final": "15:45:19",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      9,
-      11
-     ],
-     "yen": 1000
-    },
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      8,
-      11
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "園田",
-   "race_no": 12,
-   "post": "16:45",
-   "final": true,
-   "at": "16:29",
-   "at_final": "16:40:23",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      5,
-      12
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
    "venue": "浦和",
-   "race_no": 12,
-   "post": "18:20",
-   "final": true,
-   "at": "18:04",
-   "at_final": "18:15:10",
+   "race_no": 2,
+   "post": "12:50",
+   "final": false,
+   "at": "12:34",
+   "at_final": null,
    "bets": [
     {
      "type": "ワイド",
      "tier": "◎",
      "kumi": [
-      3,
-      8
-     ],
-     "yen": 1000
-    }
-   ]
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 8,
-   "post": "18:35",
-   "final": true,
-   "at": "18:19",
-   "at_final": "18:30:12",
-   "bets": []
-  },
-  {
-   "venue": "名古屋",
-   "race_no": 11,
-   "post": "20:15",
-   "final": true,
-   "at": "20:00",
-   "at_final": "20:10:12",
-   "bets": [
-    {
-     "type": "ワイド",
-     "tier": "◎",
-     "kumi": [
-      4,
-      9
+      1,
+      7
      ],
      "yen": 2000
     }
    ]
   }
  ],
- "created": "2026-11-25 20:10"
+ "created": "2026-11-26 12:34"
 }
