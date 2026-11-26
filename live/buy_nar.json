@@ -5,9 +5,9 @@
    "venue": "浦和",
    "race_no": 2,
    "post": "12:50",
-   "final": false,
+   "final": true,
    "at": "12:34",
-   "at_final": null,
+   "at_final": "12:45:02",
    "bets": [
     {
      "type": "ワイド",
@@ -21,5 +21,5 @@
    ]
   }
  ],
- "created": "2026-11-26 12:34"
+ "created": "2026-11-26 12:45"
 }
