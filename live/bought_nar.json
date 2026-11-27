@@ -1,1 +1,1 @@
-{"date": "2026-11-27", "created": "2026-11-27 11:35:27", "races": [{"venue": "園田", "race_no": 3, "bets": [{"kumi": [10, 11], "yen": 1000, "status": "done"}, {"kumi": [6, 11], "yen": 1000, "status": "done"}]}]}
+{"date": "2026-11-27", "created": "2026-11-27 14:45:19", "races": [{"venue": "園田", "race_no": 3, "bets": [{"kumi": [10, 11], "yen": 1000, "status": "done"}, {"kumi": [6, 11], "yen": 1000, "status": "done"}]}, {"venue": "浦和", "race_no": 6, "bets": [{"kumi": [9, 11], "yen": 2000, "status": "done"}]}]}
