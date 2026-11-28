@@ -1,1 +1,1 @@
-{"date": "2026-11-28", "created": "2026-11-28 19:40:28", "races": [{"venue": "高知", "race_no": 10, "bets": [{"kumi": [5, 10], "yen": 2000, "status": "done"}]}]}
+{"date": "2026-11-28", "created": "2026-11-28 20:15:49", "races": [{"venue": "高知", "race_no": 10, "bets": [{"kumi": [5, 10], "yen": 2000, "status": "done"}]}, {"venue": "高知", "race_no": 11, "bets": [{"kumi": [7, 10], "yen": 1000, "status": "done"}, {"kumi": [3, 7], "yen": 1000, "status": "done"}]}]}
